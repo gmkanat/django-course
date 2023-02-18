@@ -1,0 +1,26 @@
+{% extends 'home.html' %}
+
+{% block content %}
+  <h2>Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+{% endblock %}
+
+{% block styles %}
+  <style>
+    form {
+      max-width: 400px;
+      margin: auto;
+    }
+    input[type='text'], input[type='password'] {
+      margin-bottom: 10px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+    }
+  </style>
+{% endblock %}
